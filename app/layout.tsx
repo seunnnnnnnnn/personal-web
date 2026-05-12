@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: 'Oluwaseun Ayegbusi | Project Manager',
-  description: 'Personal website of Oluwaseun Ayegbusi - Product Manager passionate about building user-centric products and leading cross-functional teams.',
+  description: 'Personal website of Oluwaseun Ayegbusi - Project Manager passionate about building user-centric products and leading cross-functional teams.',
   generator: 'v0.app',
   icons: {
     icon: [
