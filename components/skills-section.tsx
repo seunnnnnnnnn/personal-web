@@ -1,3 +1,5 @@
+"use client"
+
 import {
   BarChart3,
   Users,
@@ -16,125 +18,65 @@ import {
   Globe,
   Building2,
   Code2,
-  FileCode,
   BrainCircuit,
-  MonitorCog,
 } from "lucide-react"
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const skills = [
   {
     icon: Workflow,
     title: "Project Delivery",
     description:
-      "Leading projects from planning through execution while balancing timelines, stakeholders and operational priorities.",
-  },
-  {
-    icon: BarChart3,
-    title: "Data-Driven Decision Making",
-    description:
-      "Using data, reporting and analytics to improve processes, reduce inefficiencies and support strategic decisions.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Process Improvement",
-    description:
-      "Identifying operational bottlenecks and redesigning systems to improve performance, efficiency and long-term value.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Stakeholder Management",
-    description:
-      "Building strong relationships and communicating effectively across technical teams, leadership and external partners.",
-  },
-  {
-    icon: Layers,
-    title: "Risk & Governance",
-    description:
-      "Supporting structured risk management, governance frameworks and programme assurance within complex environments.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Technology & Innovation",
-    description:
-      "Passionate about AI, infrastructure and emerging technologies that can transform organisations and communities.",
-  },
-  {
-    icon: Users,
-    title: "Leadership & Collaboration",
-    description:
-      "Working across multidisciplinary teams to align people, priorities and delivery towards shared outcomes.",
-  },
-  {
-    icon: Target,
-    title: "Strategic Thinking",
-    description:
-      "Focused on long-term impact, scalable systems and building solutions that combine commercial and social value.",
-  },
-  {
-    icon: Database,
-    title: "SQL & Databases",
-    description:
-      "Experience working with structured data, querying databases and supporting data-led operational insights.",
+      "Leading projects from planning through execution across complex operational environments.",
   },
   {
     icon: Code2,
     title: "Python",
     description:
-      "Using Python for automation, analytics, problem solving and exploring AI and machine learning applications.",
+      "Using Python for analytics, automation and AI-focused problem solving.",
   },
   {
-    icon: FileCode,
-    title: "Technical Understanding",
+    icon: Database,
+    title: "SQL & Data",
     description:
-      "Background in Computer Science with exposure to software systems, coding principles and digital technologies.",
+      "Working with structured data and reporting to support operational insights.",
   },
   {
     icon: BrainCircuit,
-    title: "AI & Machine Learning",
+    title: "AI & Innovation",
     description:
-      "Interested in applying artificial intelligence and machine learning to operational efficiency and infrastructure challenges.",
-  },
-  {
-    icon: MonitorCog,
-    title: "Digital Transformation",
-    description:
-      "Supporting modernisation initiatives through technology, process redesign and systems thinking.",
+      "Exploring how AI and emerging technology can improve infrastructure systems.",
   },
   {
     icon: ShieldCheck,
-    title: "Operational Risk",
+    title: "Risk & Governance",
     description:
-      "Supporting risk identification, mitigation and governance across large-scale operational and infrastructure environments.",
+      "Supporting structured risk management and programme governance.",
   },
   {
     icon: Briefcase,
     title: "Commercial Awareness",
     description:
-      "Understanding how operational decisions, procurement and supplier relationships influence business performance.",
-  },
-  {
-    icon: LineChart,
-    title: "Continuous Improvement",
-    description:
-      "Focused on delivering measurable outcomes through optimisation, efficiency improvements and smarter systems.",
+      "Understanding supplier strategy, procurement and operational value creation.",
   },
   {
     icon: Wrench,
     title: "Engineering Mindset",
     description:
-      "Applying structured problem solving and systems thinking from a background in Mechanical Engineering.",
+      "Structured problem solving shaped by Mechanical Engineering.",
   },
   {
     icon: Globe,
-    title: "Global Impact Vision",
+    title: "Global Impact",
     description:
-      "Driven by a long-term ambition to improve infrastructure, energy access and technology adoption across Africa.",
-  },
-  {
-    icon: Building2,
-    title: "Infrastructure & Utilities",
-    description:
-      "Experience working within complex infrastructure environments supporting operational delivery and transformation.",
+      "Focused on scalable infrastructure and technology impact across Africa.",
   },
 ]
 
@@ -152,32 +94,44 @@ export function SkillsSection() {
           </h2>
 
           <p className="text-muted-foreground max-w-3xl mx-auto">
-            A combination of engineering, technology, project leadership and
-            strategic thinking developed through experience across
-            infrastructure, operational improvement and digital transformation.
+            Combining engineering, technology, leadership and strategic thinking
+            across infrastructure and digital transformation.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {skills.map((skill) => (
-            <div
-              key={skill.title}
-              className="bg-card p-6 rounded-xl border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 group"
-            >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <skill.icon className="w-6 h-6 text-primary" />
-              </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
+            {skills.map((skill) => (
+              <CarouselItem
+                key={skill.title}
+                className="md:basis-1/2 lg:basis-1/3"
+              >
+                <div className="h-full bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl transition-all duration-300">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <skill.icon className="w-6 h-6 text-primary" />
+                  </div>
 
-              <h3 className="font-semibold text-foreground mb-2">
-                {skill.title}
-              </h3>
+                  <h3 className="font-semibold text-lg text-foreground mb-3">
+                    {skill.title}
+                  </h3>
 
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {skill.description}
-              </p>
-            </div>
-          ))}
-        </div>
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    {skill.description}
+                  </p>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   )
