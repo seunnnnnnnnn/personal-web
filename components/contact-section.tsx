@@ -6,7 +6,7 @@ const socialLinks = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/",
+    href: "https://www.linkedin.com/in/seun-ayegbusi-238946195/",
     username: "@oluwaseun"
   },
   {
