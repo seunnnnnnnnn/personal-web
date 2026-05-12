@@ -11,7 +11,7 @@ const experiences = [
     ]
   },
   {
-    role: "Product Manager",
+    role: "Graduate Project Manager",
     company: "Growth Startup",
     period: "2020 - 2022",
     description: "Managed the full product lifecycle for a consumer mobile app, from ideation to launch, scaling the user base from 10K to 500K active users.",
@@ -22,9 +22,9 @@ const experiences = [
     ]
   },
   {
-    role: "Associate Product Manager",
-    company: "Digital Agency",
-    period: "2018 - 2020",
+    role: "Software Engineer",
+    company: "IBM",
+    period: "May 2024 - September 2024",
     description: "Collaborated with clients to define product requirements and worked with development teams to deliver custom web and mobile solutions.",
     achievements: [
       "Successfully delivered 15+ client projects on time and budget",
