@@ -90,3 +90,81 @@ const experiences = [
     ],
   },
 ]
+
+export function ExperienceSection() {
+  return (
+    <section id="experience" className="py-24 px-6">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-16">
+          <p className="text-primary font-medium mb-2 tracking-wide uppercase text-sm">
+            Experience
+          </p>
+
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
+            My Professional Journey
+          </h2>
+
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            A journey shaped by engineering, technology, infrastructure and
+            leadership across operational transformation and digital innovation.
+          </p>
+        </div>
+
+        <div className="relative">
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" />
+
+          <div className="space-y-12">
+            {experiences.map((exp, index) => (
+              <div
+                key={exp.role + exp.company}
+                className={`relative flex flex-col md:flex-row gap-8 ${
+                  index % 2 === 0 ? "md:flex-row-reverse" : ""
+                }`}
+              >
+                <div className="absolute left-0 md:left-1/2 w-3 h-3 bg-primary rounded-full -translate-x-[5px] md:-translate-x-1.5 mt-2" />
+
+                <div
+                  className={`md:w-1/2 pl-8 md:pl-0 ${
+                    index % 2 === 0 ? "md:pr-12" : "md:pl-12"
+                  }`}
+                >
+                  <div className="bg-card p-6 rounded-xl border border-border hover:shadow-lg transition-shadow">
+                    <span className="text-sm text-primary font-medium">
+                      {exp.period}
+                    </span>
+
+                    <h3 className="font-semibold text-xl text-foreground mt-1">
+                      {exp.role}
+                    </h3>
+
+                    <p className="text-muted-foreground font-medium mb-3">
+                      {exp.company}
+                    </p>
+
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                      {exp.description}
+                    </p>
+
+                    <ul className="space-y-2">
+                      {exp.achievements.map((achievement, i) => (
+                        <li
+                          key={i}
+                          className="text-sm text-muted-foreground flex items-start gap-2"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                          {achievement}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="hidden md:block md:w-1/2" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
