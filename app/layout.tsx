@@ -3,20 +3,52 @@ import { Source_Sans_3, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const sourceSans = Source_Sans_3({ 
-  subsets: ["latin"],
-  variable: '--font-sans'
-});
+const sourceSans = Source_Sans_3({
+  subsets: ['latin'],
+  variable: '--font-sans',
+})
 
-const playfair = Playfair_Display({ 
-  subsets: ["latin"],
-  variable: '--font-serif'
-});
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-serif',
+})
 
 export const metadata: Metadata = {
-  title: 'Oluwaseun Ayegbusi | Product Manager',
-  description: 'Personal website of Oluwaseun Ayegbusi - Product Manager passionate about building user-centric products and leading cross-functional teams.',
-  generator: 'v0.app',
+  title: 'Oluwaseun Ayegbusi | Project Manager, Engineer & Builder',
+  
+  description:
+    'Oluwaseun Ayegbusi is a Project Manager at United Utilities with a background in Mechanical Engineering and Computer Science. Passionate about infrastructure, technology, AI, and building systems that create long-term impact across the UK and Africa.',
+
+  keywords: [
+    'Oluwaseun Ayegbusi',
+    'Project Manager',
+    'United Utilities',
+    'Mechanical Engineer',
+    'Computer Science',
+    'Infrastructure',
+    'Technology',
+    'AI',
+    'Leadership',
+    'Nigeria',
+    'Renewable Energy',
+  ],
+
+  authors: [{ name: 'Oluwaseun Ayegbusi' }],
+
+  creator: 'Oluwaseun Ayegbusi',
+
+  metadataBase: new URL('https://oluwaseun.co.uk'),
+
+  openGraph: {
+    title: 'Oluwaseun Ayegbusi',
+    description:
+      'Project Manager, Engineer, and Builder focused on infrastructure, technology, leadership, and impact.',
+    url: 'https://oluwaseun.co.uk',
+    siteName: 'Oluwaseun Ayegbusi',
+    locale: 'en_GB',
+    type: 'website',
+  },
+
   icons: {
     icon: [
       {
@@ -43,8 +75,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth bg-background">
-      <body className={`${sourceSans.variable} ${playfair.variable} font-sans antialiased`}>
+      <body
+        className={`${sourceSans.variable} ${playfair.variable} font-sans antialiased`}
+      >
         {children}
+
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
