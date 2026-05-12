@@ -13,45 +13,6 @@ const experiences = [
   },
 
   {
-    role: "Operational Transformation Lead",
-    company: "Asset Recovery Programme",
-    period: "2025",
-    description:
-      "Led transformation work focused on improving operational efficiency, process ownership and revenue recovery across a complex legacy process.",
-    achievements: [
-      "Designed improved operational workflows across cross-functional teams",
-      "Improved coordination and visibility across operational stakeholders",
-      "Delivered measurable commercial and operational improvements",
-    ],
-  },
-
-  {
-    role: "Risk Manager",
-    company: "Bio Assets Consolidation Programme",
-    period: "2025",
-    description:
-      "Supporting risk governance for a multi-billion-pound infrastructure consolidation programme transitioning 13 operational centres into 6 strategic hubs.",
-    achievements: [
-      "Managed programme risk frameworks across infrastructure transformation activity",
-      "Delivered executive-level risk reporting supporting strategic decisions",
-      "Supported governance and long-term operational planning",
-    ],
-  },
-
-  {
-    role: "Supply Chain Strategy Analyst",
-    company: "Commercial Indirects",
-    period: "2025",
-    description:
-      "Worked on supplier visibility and commercial risk initiatives across a £2.5B procurement environment.",
-    achievements: [
-      "Designed supply chain mapping framework across Tier 1–4 suppliers",
-      "Improved supplier visibility and proactive risk identification",
-      "Strengthened understanding of procurement, contractor ecosystems and commercial operations",
-    ],
-  },
-
-  {
     role: "Software Engineer Intern",
     company: "IBM",
     period: "2024",
