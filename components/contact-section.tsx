@@ -12,14 +12,14 @@ const socialLinks = [
   {
     icon: Twitter,
     label: "Twitter",
-    href: "https://twitter.com/",
+    href: "https://x.com/oluwaseuna84633",
     username: "@oluwaseun"
   },
   {
     icon: Mail,
     label: "Email",
-    href: "mailto:hello@oluwaseun.com",
-    username: "hello@oluwaseun.com"
+    href: "mailto:oluwaseun.ayeg@gmail.com",
+    username: "oluwaseun.ayeg@gmail.com"
   }
 ]
 
